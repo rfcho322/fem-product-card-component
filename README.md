@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Frontend Mentor solution URL: [Product Preview Card Component Solution](https://your-solution-url.com)
+- Frontend Mentor solution URL: [Product Preview Card Component Solution](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa/hub)
 - Live Site URL: [Product Preview Card Component Live Website](https://rfcho322.github.io/fem-product-card-component/)
 
 ## My process
