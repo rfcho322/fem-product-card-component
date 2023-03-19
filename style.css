@@ -1,0 +1,256 @@
+:root {
+    /* PRIMARY COLORS */
+    --clr-primary-100: hsl(30, 38%, 92%); /* Cream */
+    --clr-primary-200: hsl(158, 36%, 37%); /* Dark cyan */
+    --clr-primary-300: hsl(158, 36%, 22%); /* Very dark cyan */
+    /* NEUTRAL COLORS */
+    --clr-neutral-100: hsl(0, 0%, 100%);  /* White */
+    --clr-neutral-200: hsl(228, 12%, 48%);    /*Dark grayish blue */
+    --clr-neutral-300: hsl(212, 21%, 14%); /* Very dark blue */
+
+    --clr-transparent: hsla(228, 12%, 48%, 0.61);    /*Dark grayish blue */
+    /* FOOTER COLOR */
+    --clr-footer-100: var(--clr-neutral-300);
+    --clr-footer-200: var(--clr-primary-200);
+    /* FONT FAMILY */
+    --ff-primary: 'Fraunces', serif;
+    --ff-secondary: 'Montserrat', sans-serif;
+    /* FONT SIZE */
+    --fs-100: 0.75rem;  /* 12px */
+    --fs-200: 0.875rem; /* 14px */
+    --fs-300: 2rem; /* 32px */
+    /* SIZES */
+    --size-100: 0.625rem; /* 10px */
+    --size-200: 0.9375rem; /* 15px */
+    --size-300: 1.25rem; /* 20px */
+    --size-400: 1.5625rem; /* 25px */
+    --size-500: 2.1875rem; /* 35px */
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+/* ADDED STYLING */
+
+.wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: var(--clr-primary-100);
+}
+
+.main {
+    padding-inline: var(--size-200);
+}
+
+.card {
+    max-width: 375px;
+    background-color: var(--clr-neutral-100);
+    border-radius: 10px;
+}
+
+.card-image img {
+    border-radius: 10px 10px 0px 0px;
+    filter: brightness(80%);
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 750px;
+        display: flex;
+    }
+    .card-image img {
+        max-width: 300px;
+        border-radius: 10px 0px 0px 10px;
+        content: url("images/image-product-desktop.jpg");
+    }  
+}
+
+.product-name {
+    line-height: 1;
+}
+
+.product-description {
+    padding: var(--size-400);
+}
+
+@media (min-width: 768px) {
+    .product-description {
+        max-width: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: var(--size-500);
+    }
+}
+
+.product-price {
+    gap: 1.3rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.btn {
+    border: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: var(--size-200);
+    border-radius: 10px;
+    gap: 0.75rem;
+}
+
+.footer {
+    height: 50px;
+    font-size: var(--fs-100);
+}
+
+.footer-items a {
+    text-decoration: none;
+    color: var(--clr-footer-200);
+}
+
+.footer-items a:hover, .footer a:focus {
+    color: var(--clr-footer-100);
+}
+
+@media (min-width: 768px) {
+    .footer {
+        font-size: var(--fs-200);
+    }
+}
+
+/* CUSTOM PROPERTIES */
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.ff-primary {
+    font-family: var(--ff-primary);
+}
+
+.ff-secondary {
+    font-family: var(--ff-secondary);
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: var(--clr-primary-200)
+}
+
+.text-muted {
+    color: var(--clr-neutral-200);
+}
+
+.text-dark {
+    color: var(--clr-neutral-300);
+}
+
+.text-light {
+    color: var(--clr-neutral-100);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-sm {
+    font-size: var(--fs-100);
+}
+
+.text-md {
+    font-size: var(--fs-200);
+}
+
+.text-lg {
+    font-size: var(--fs-300);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ls {
+    letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+    .ls {
+        letter-spacing: 5px;
+    }
+}
+
+.mb-1 {
+    margin-bottom: var(--size-100);
+}
+
+.mb-2 {
+    margin-bottom: var(--size-300);
+}
+
+.mt-1 {
+    margin-top: var(--size-100);
+}
+
+.mt-2 {
+    margin-top: var(--size-300);
+}
+
+.btn-primary {
+    background-color: var(--clr-primary-200);
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-300);
+}
+
+.btn-block {
+    width: 100%;
+}
+

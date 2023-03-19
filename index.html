@@ -5,26 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="images/ss-desktop.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
+  <div class="wrapper">
 
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <main class="main | d-flex align-center justify-content-center">
+      <div class="card | mt-2 mb-2">
+        <div class="card-image">
+          <img src="images/image-product-mobile.jpg">
+        </div>
+        <div class="product-description">
+          <p class="ff-secondary text-muted ls text-uppercase text-sm mb-1">Perfume</p>
+          <h1 class="product-name | ff-primary text-dark mb-2">Gabrielle Essence Eau De Parfum</h1>
+          <p class="ff-secondary text-muted text-md mb-2">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="product-price | d-flex align-center mb-1">
+            <span class="discount-price | ff-primary fw-500 text-primary text-lg">$149.99</span>
+            <span class="original-price | ff-secondary text-muted text-md">$169.99</span>
+          </div>
+          <button type="button" class="btn | btn-primary btn-block ff-secondary text-light fw-700">
+            <img src="images/icon-cart.svg">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="footer | d-flex align-center justify-content-center">
+      <div class="footer-items ff-secondary fw-500">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#" aria-label="source code link">rfcho322</a>.
+      </div>
+    </footer>
   </div>
 </body>
 </html>
